@@ -26,7 +26,7 @@ function fn() {
   // (reported as passed) if the provider has not declared the capability.
   function requireCapability(name) {
     if (!data.capabilities[name]) {
-      karate.log('SKIPPED: capability "' + name + '" is not enabled in the test data');
+      karate.logger.warn('SKIPPED: capability "' + name + '" is not enabled in the test data');
       karate.abort();
     }
   }

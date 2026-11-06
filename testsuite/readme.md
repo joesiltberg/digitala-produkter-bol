@@ -144,6 +144,7 @@ testsuite/
   pom.xml                           Maven build (Karate 1.4.1, JUnit 5)
   src/test/java/
     karate-config.js                reads configuration, exposes baseUrl, data, requireCapability and callbackCfg to the features
+    logback-test.xml                log levels, keeps the console output to the summary
     testdata.json                   default test data (all capabilities off)
     bol/BolTest.java                JUnit entry point, runs all features in bol/
     bol/*.feature                   the tests

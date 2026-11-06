@@ -1,0 +1,17 @@
+<configuration>
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <!-- Set to DEBUG to see every request and response -->
+  <logger name="com.intuit.karate" level="WARN"/>
+  <logger name="com.intuit.karate.Suite" level="INFO"/>
+  <logger name="karate" level="WARN"/>
+
+  <root level="WARN">
+    <appender-ref ref="STDOUT"/>
+  </root>
+</configuration>
+

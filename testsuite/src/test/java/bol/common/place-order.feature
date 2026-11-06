@@ -41,11 +41,11 @@ Feature: Place an order and wait for the final result
             var remaining = deadline - System.currentTimeMillis();
             var message = remaining > 0 ? queue.poll(remaining, TimeUnit.MILLISECONDS) : null;
             if (message == null) {
-              karate.fail('Order ' + orderNo + ' is still being processed, but no reply was received at the responseUrl within ' + callbackCfg.timeoutSeconds + ' seconds');
+              throw new Error('Order ' + orderNo + ' is still being processed, but no reply was received at the responseUrl within ' + callbackCfg.timeoutSeconds + ' seconds');
             }
             var callback = karate.fromString(message);
             if (callback.method != 'POST' || callback.body.clientOrderNumber != orderNo) {
-              karate.fail('Unexpected call to the responseUrl: ' + message);
+              throw new Error('Unexpected call to the responseUrl: ' + message);
             }
             var updates = callback.body.orderLines;
             current = {
