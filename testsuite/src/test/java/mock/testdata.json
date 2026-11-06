@@ -1,0 +1,26 @@
+{
+  "capabilities": {
+    "assignmentDelete": true,
+    "userLicenses": true
+  },
+  "clientId": "https://bol-testclient.example.com",
+  "serviceProviderId": "https://bol-testprovider.example.com",
+  "buyer": {
+    "type": "organization",
+    "organizationNumber": "0000000000",
+    "name": "BOL Test Organisation"
+  },
+  "school": {
+    "idSource": "skolverket",
+    "id": "00000001",
+    "name": "BOL Test School"
+  },
+  "user": {
+    "idSource": "eppn",
+    "id": "bol-testuser-1@bol-testschool.example.com"
+  },
+  "articles": {
+    "digital": { "articleNumber": "BOLTEST-DIGITAL-1" },
+    "unknown": { "articleNumber": "BOLTEST-DOES-NOT-EXIST" }
+  }
+}
